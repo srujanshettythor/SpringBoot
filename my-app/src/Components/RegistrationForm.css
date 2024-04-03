@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./reg.jpg'); /* Added background image path */
+    background-size: cover; /* Ensure the background image covers the entire page */
+    background-position: center; /* Center the background image */
+  }
+  
+  .registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for spacing */
+    background-color: rgba(255, 255, 255, 0.7); /* Added background color with opacity */
+    border-radius: 8px; /* Added border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+    margin-top: 90px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px; /* Adjusted padding for input fields */
+    font-size: 16px;
+    border: 1px solid #dfb5b5;
+    border-radius: 4px;
+    border-color:black;
+    background-color: whitesmoke;
+  }
+  
+  button {
+    width: 40%; /* Make button full width */
+    padding: 12px; /* Adjusted padding for button */
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition for hover effect */
+  }
+  
+  button:hover {
+    background-color: #00b362;
+  }
+  
