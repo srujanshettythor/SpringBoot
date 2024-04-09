@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap');
 
-body {
+.conbody {
   font-family: 'Anek Malayalam', sans-serif;
   background: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
   color: #11052c;
@@ -11,51 +11,47 @@ body {
 }
 
 .quiz-container {
-  width: 150%;
-  min-width: 250px;
+  width: 100%;
+  max-width: 600px; /* Adjusted width for better responsiveness */
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-top: 100px;
-  padding: 30px 60px;
-  /* Add a fixed height and enable vertical scrolling */
-  max-height: 500px; /* Adjust the height as needed */
+  padding: 30px 20px; /* Adjusted padding for better spacing */
   overflow-y: auto;
-  margin-left: -35%;
 }
 
 .quiz-container .active-question-no {
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 24px; /* Adjusted font size for better visibility */
+  font-weight: 600; /* Increased font weight for emphasis */
   color: #800080;
 }
 
 .quiz-container .total-question {
-  font-size: 16px;
-  font-weight: 500;
-  color: #e0dee3;
+  font-size: 14px; /* Adjusted font size for better readability */
+  font-weight: 400; /* Reduced font weight for secondary text */
+  color: #888; /* Adjusted color for secondary text */
 }
 
 .quiz-container h2 {
-  font-size: 20px;
+  font-size: 18px; /* Adjusted font size for better readability */
   font-weight: 500;
-  margin: 0;
+  margin: 10px 0; /* Adjusted margin for better spacing */
 }
 
 .quiz-container ul {
-  margin-top: 20px;
-  margin-left: 20px;
+  margin: 20px 0; /* Adjusted margin for better spacing */
+  padding: 0;
 }
 
 .quiz-container ul li {
-  text-decoration: none;
   list-style: none;
   color: #2d264b;
   font-size: 16px;
-  background: #ffffff;
+  background: #f9f9f9; /* Adjusted background color for better contrast */
   border: 1px solid #eaeaea;
-  border-radius: 16px;
-  padding: 11px;
-  margin-top: 15px;
+  border-radius: 8px;
+  padding: 12px 20px; /* Adjusted padding for better spacing */
+  margin-top: 10px; /* Adjusted margin for better spacing */
   cursor: pointer;
 }
 
@@ -71,13 +67,14 @@ body {
 .quiz-container button {
   background: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
   border-radius: 9px;
-  font-size: 18px;
+  font-size: 16px; /* Adjusted font size for better consistency */
+  font-weight: 500; /* Increased font weight for emphasis */
   color: #ffffff;
-  padding: 10px 42px;
+  padding: 12px 30px; /* Adjusted padding for better spacing */
   outline: none;
   border: none;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 20px; /* Adjusted margin for better spacing */
 }
 
 .quiz-container button:disabled {
@@ -85,5 +82,3 @@ body {
   color: #9fa3a9;
   cursor: not-allowed;
 }
-
-

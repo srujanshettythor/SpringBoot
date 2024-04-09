@@ -49,7 +49,8 @@ const Quiz = () => {
   };
 
   return (
-    <div className="quiz-container">
+   <div className="conbody">
+     <div className="quiz-container">
       <h1 className="heading">Quiz</h1>
       <div>
         {quizData.map((question) => (
@@ -87,6 +88,7 @@ const Quiz = () => {
         <p className="total-questions">Total Questions: {quizData.length}</p>
       )}
     </div>
+   </div>
   );
 };
 export default Quiz;

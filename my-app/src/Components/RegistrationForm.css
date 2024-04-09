@@ -1,19 +1,30 @@
-body {
+
+.register{
     margin: 0;
     padding: 0;
     background-image: url('./reg.jpg'); /* Added background image path */
     background-size: cover; /* Ensure the background image covers the entire page */
-    background-position: center; /* Center the background image */
+    background-position: center; 
+    height: 100vh;
+    /* width: 100vw;  */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
   }
   
   .registration-form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px; /* Added padding for spacing */
     background-color: rgba(255, 255, 255, 0.7); /* Added background color with opacity */
     border-radius: 8px; /* Added border radius for rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
     margin-top: 90px;
+    width: 30%;
+    height: fit-content;
+    
+
   }
   
   .form-group {

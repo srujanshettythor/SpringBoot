@@ -59,7 +59,8 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="registration-form">
+    <div className="register">
+      <div className="registration-form">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -86,6 +87,7 @@ const RegistrationForm = () => {
               Don't have account? <Link to="/Login">Login</Link>
               /</p>
       </form>
+    </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-body {
+.addbody {
     margin: 0;
     padding: 0;
     background-image: url('https://us.123rf.com/450wm/aksanamoon/aksanamoon1905/aksanamoon190500038/122385034-quiz-on-your-computer-screen-with-answer-choices-interesting-vector-illustration.jpg?ver=6');
@@ -10,6 +10,8 @@ body {
   .quiz-form-container {
     max-width: 600px;
     margin: 50px auto;
+    border: #6a0074 solid 2px;
+    border-radius: 10px;
   }
   
   .form-content {
@@ -21,6 +23,7 @@ body {
   .quiz-form {
     display: flex;
     flex-direction: column;
+    /* height: fit-content; */
   }
   
   .form-group {
@@ -36,7 +39,8 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: 80%;
+    align-self: center;
   }
   
   .submit-btn {
@@ -47,6 +51,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-content: center;
   }
   
   .submit-btn:hover {

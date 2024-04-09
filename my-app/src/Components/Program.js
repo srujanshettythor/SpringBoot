@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Conduct.css";
 
-const QuizH = () => {
+const QuizP = () => {
   const [quizData, setQuizData] = useState([]);
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(null);
@@ -12,7 +12,7 @@ const QuizH = () => {
     const fetchQuizData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/quiz/category/History"
+          "http://localhost:8000/quiz/category/programming"
         );
         setQuizData(response.data);
       } catch (error) {
@@ -53,7 +53,7 @@ const QuizH = () => {
   return (
     <div className="conbody">
       <div className="quiz-container">
-        <h1 className="heading">History Quiz</h1>
+        <h1 className="heading">Program Quiz</h1>
         <div>
           {quizData.map((question) => (
             <div key={question.id} className="question-container">
@@ -104,4 +104,4 @@ const QuizH = () => {
     </div>
   );
 };
-export default QuizH;
+export default QuizP;

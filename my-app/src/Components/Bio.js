@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './Conduct.css'; 
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./Conduct.css";
 
 const QuizB = () => {
   const [quizData, setQuizData] = useState([]);
@@ -11,10 +11,12 @@ const QuizB = () => {
   useEffect(() => {
     const fetchQuizData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/quiz/category/Biology');
+        const response = await axios.get(
+          "http://localhost:8000/quiz/category/Biology"
+        );
         setQuizData(response.data);
       } catch (error) {
-        console.error('Error fetching quiz data:', error);
+        console.error("Error fetching quiz data:", error);
       }
     };
 
@@ -49,43 +51,56 @@ const QuizB = () => {
   };
 
   return (
-    <div className="quiz-container">
-      <h1 className="heading">Quiz</h1>
-      <div>
-        {quizData.map((question) => (
-          <div key={question.id} className="question-container">
-            <h2 className="question-title">{question.questionTitle}</h2>
-            <ul className="option-list">
-              {['option1', 'option2', 'option3', 'option4'].map((option, index) => (
-                <li
-                  key={index}
-                  className={
-                    (submitted && userAnswers[question.id] === question[option] && userAnswers[question.id] !== question.answer)
-                      ? 'selected-answer incorrect-answer'
-                      : userAnswers[question.id] === question[option]
-                      ? 'selected-answer'
-                      : ''
-                  }
-                  onClick={() => handleAnswerChange(question.id, question[option])}
-                >
-                  {question[option]}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div className="submit-container">
-        <button className="submit-button" onClick={handleSubmit}>Submit</button>
-      </div>
-      {score !== null ? (
-        <div className="result">
-          <h3>Your score:</h3>
-          <p><span className="score">{score}</span> out of <span>{quizData.length}</span></p>
+    <div className="conbody">
+      <div className="quiz-container">
+        <h1 className="heading">Bio Quiz</h1>
+        <div>
+          {quizData.map((question) => (
+            <div key={question.id} className="question-container">
+              <h2 className="question-title">{question.questionTitle}</h2>
+              <ul className="option-list">
+                {["option1", "option2", "option3", "option4"].map(
+                  (option, index) => (
+                    <li
+                      key={index}
+                      className={
+                        submitted &&
+                        userAnswers[question.id] === question[option] &&
+                        userAnswers[question.id] !== question.answer
+                          ? "selected-answer incorrect-answer"
+                          : userAnswers[question.id] === question[option]
+                          ? "selected-answer"
+                          : ""
+                      }
+                      onClick={() =>
+                        handleAnswerChange(question.id, question[option])
+                      }
+                    >
+                      {question[option]}
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+          ))}
         </div>
-      ) : (
-        <p className="total-questions">Total Questions: {quizData.length}</p>
-      )}
+        <div className="submit-container">
+          <button className="submit-button" onClick={handleSubmit}>
+            Submit
+          </button>
+        </div>
+        {score !== null ? (
+          <div className="result">
+            <h3>Your score:</h3>
+            <p>
+              <span className="score">{score}</span> out of{" "}
+              <span>{quizData.length}</span>
+            </p>
+          </div>
+        ) : (
+          <p className="total-questions">Total Questions: {quizData.length}</p>
+        )}
+      </div>
     </div>
   );
 };

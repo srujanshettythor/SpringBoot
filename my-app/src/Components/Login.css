@@ -6,7 +6,9 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url('./image.png');
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .login-form {
@@ -18,6 +20,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
     width: 400px;
     height: 300px;;
+    border-color:#e06932;
 }
 
 .form-group {

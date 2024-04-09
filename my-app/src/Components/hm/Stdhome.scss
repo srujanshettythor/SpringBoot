@@ -1,0 +1,22 @@
+.home {
+    display: flex;
+    
+    .homeContainer {
+        flex: 6;
+
+        .widgets {
+            display: flex;
+            padding: 30px;
+        }
+    }
+
+    .welcome {
+        border: rgb(90, 90, 90) solid 5px;
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        padding: 10px;
+        margin: 20vh;
+        color: red;
+    }
+}

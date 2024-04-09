@@ -1,0 +1,21 @@
+.app.dark{
+    background-color: black;
+    color: white;
+
+
+    .navbar{
+        color: #999;
+        border-color: #333;
+        .search{
+            border-color: #333;
+        }
+    
+}
+    .sidebar{
+        background-color:#111;
+        border-color: #333;
+        hr{
+            color: #333;
+        }
+    }
+}
